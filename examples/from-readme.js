@@ -5,7 +5,7 @@ const builder = new addonBuilder({
 	id: 'org.myexampleaddon',
 	version: '1.0.0',
 
-	name: 'simple example',
+	name: 'R3DIANCE',
 
 	// Properties that determine when Stremio picks this add-on
 	// this means your add-on will be used for streams of the type movie
@@ -27,3 +27,4 @@ builder.defineStreamHandler(function(args) {
 })
 
 serveHTTP(builder.getInterface(), { port: 43001 })
+publishToCentral("https://r3diance.herokuapp.com//manifest.json") // <- invoke this if you want to publish your add-on and it's accessible publically on "your-domain"
